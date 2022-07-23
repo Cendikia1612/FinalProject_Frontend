@@ -1,0 +1,101 @@
+/********************
+ * Navbar-account
+ ********************/
+.navbar-account {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+}
+
+.navbar-account-items {
+    margin-top: 0.6%;
+    margin-bottom: 0.5%;
+}
+
+.logo {
+    width: 100px;
+    height: 34px;
+    background-color: #4B1979;
+    margin-left: 5%;
+}
+
+.navbar-account-text {
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 47%;
+
+}
+
+/********************
+ * Info-account
+ ********************/
+.profil-account {
+    width: 100px;
+	height: 100px;
+	margin-left: 40%;
+	border: none;
+    position: relative;
+}
+
+.profil-camera-form {
+	height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.account-camera-icon {
+    color: #7126B5;
+}
+
+.account-items {
+    margin-left: 35%;
+}
+
+.setting-account-icon {
+    color: #7126B5;
+}
+
+.edit-account-icon {
+    color: #7126B5;
+    font-size: 22px;
+}
+
+.logout-icon {
+    color: #7126B5;
+    font-size: 22px;
+}
+
+.account-text1 {
+    text-align: center;
+    color: #8A8A8A;
+    margin-top: 5%;
+}
+
+@media (max-width: 1023px) {
+    .navbar-account {
+        box-shadow: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-account-items {
+        margin: 0 0 0 5%;
+        position:fixed;
+    }
+
+    .profil-account {
+        margin-left: 25%;
+		margin-top: 30%;
+        position: relative;
+    }
+
+    .profil-camera-form {
+        position:fixed;
+    }
+
+    .account-items {
+        margin: 5% 0 0 10%; 
+    }
+}
+
