@@ -174,8 +174,8 @@ export default function Home() {
                         <Button className="d-flex gap-1 px-3" variant="primary" onClick={() => setCategory("hobi")}>
                             <FiSearch className="align-self-center" /> Hobi
                         </Button>
-                        <Button className="d-flex gap-1 px-3" variant="primary" onClick={() => setCategory("kendaraan")}>
-                            <FiSearch className="align-self-center" /> Kendaraan
+                        <Button className="d-flex gap-1 px-3" variant="primary" onClick={() => setCategory("accessories")}>
+                            <FiSearch className="align-self-center" /> Accessories
                         </Button>
                         <Button className="d-flex gap-1 px-3" variant="primary" onClick={() => setCategory("Baju")}>
                             <FiSearch className="align-self-center" /> Baju
