@@ -1,0 +1,23 @@
+#daftar-jual button:hover, .active {
+    color: #7126B5!important;
+    background-color: transparent!important;
+  }
+  
+  #daftar-jual button:focus {
+    box-shadow: none!important;
+  }
+  
+  .radioSubLabel {
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-color: #8A8A8A;
+    margin-left: 24px;
+    margin-right: 70px;
+  }
+  
+  .button-icon {
+    margin-left: 90px;
+    margin-right: 100px;
+    background: #7126B5;
+    font-family: 'Poppins';
+  }
