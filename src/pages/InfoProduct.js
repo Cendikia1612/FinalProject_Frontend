@@ -119,7 +119,7 @@ function InfoProduct(props) {
           },
         }
       );
-      
+
       const createResponse = createRequest.data;
 
       dispatch(
