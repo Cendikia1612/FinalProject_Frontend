@@ -11,9 +11,11 @@ import UpdateProduct from "./pages/UpdateProduct";
 import Account from "./pages/Account";
 import DaftarJual from "./pages/DaftarJual";
 import DetailProduct from "./pages/DetailProduct";
+import DetailProductBuyer from "./pages/DetailProductBuyer"
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import InfoProduct from "./pages/InfoProduct";
+import InfoPenawar from "./pages/InfoPenawar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,6 +31,8 @@ root.render(
         <Route path="/account" element={<Account />} />
         <Route path="/seller/daftar-jual" element={<DaftarJual />} />
         <Route path="/detailproduct" element={<DetailProduct />} />
+        <Route path="/detailproductbuyer" element={<DetailProductBuyer />} />
+        <Route path="/infopenawar" element={<InfoPenawar/>} />
       </Routes>
     </Router>
   </Provider>

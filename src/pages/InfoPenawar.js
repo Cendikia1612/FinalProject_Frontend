@@ -2,10 +2,7 @@ import { Profiler, useEffect, useRef, useState } from "react";
 import { Nav, Navbar, Form, Container, Button, Alert } from "react-bootstrap";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import { FiCamera, FiArrowLeft } from "react-icons/fi";
-import axios from "axios";
 import "../css/mainRio.css";
-import { Box } from "@mui/material";
-// import React, { useState, useEffect } from "react";
 import {
     Stack,
     Row,
@@ -13,7 +10,6 @@ import {
     Card,
     Modal,
 } from "react-bootstrap";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { ModalPenawar } from "../component/modalStatus";
 
@@ -53,13 +49,14 @@ export default function InfoPenawar() {
                 </nav>
             </div>
             <div>
-                <Row>
-                    <div className="col-2 text-center mt-3">
+                    <div className="col-6 text-center mt-3">
                         <Link className="arrow2" to="/" style={{ color: "black" }}>
                             <FiArrowLeft />
                         </Link>
                     </div>
-                    <div className="col-8 mt-4">
+                <Row>
+                    <div className="col-2"></div>
+                    <div className="col-4 mt-4">
                         <div className="radius-primary box-shadow p-3">
                             <Stack direction="horizontal" gap={3}>
                                 <img src="../images/profile.png" alt="" />
