@@ -16,6 +16,7 @@ import "../css/mainRio.css";
 import { useDropzone } from "react-dropzone";
 import { addProduct } from "../slices/productSlice";
 
+
 function InfoProduct(props) {
   const navigate = useNavigate();
   const nameField = useRef("");
@@ -106,7 +107,7 @@ function InfoProduct(props) {
       postPayload.append("sold", isSold);
       postPayload.append("isPublish", isPublish);
       files.forEach(element => {
-        postPayload.append("image", element);
+      postPayload.append("image", element);
       });
 
       const createRequest = await axios.post(
@@ -131,14 +132,14 @@ function InfoProduct(props) {
         else navigate("/seller/daftar-jual")
       }
 
-    } catch (err) {
-      const response = err.response.data;
-      setErrorResponse({
-        isError: true,
-        message: response.message,
-      });
-    }
-  };
+     } catch (err) {
+     const response = err.response.data;
+    setErrorResponse({
+    isError: true,
+      // message: response.message,
+   });
+  }
+   };
 
   return (
     <div>
@@ -179,7 +180,7 @@ function InfoProduct(props) {
           <select ref={categoryField} className="form-select">
             <option hidden>Pilih Kategori</option>
             <option value="hobi">Hobi</option>
-            <option value="kendaraan">Kendaraan</option>
+            <option value="Accessories">Accessories</option>
             <option value="Baju">Baju</option>
             <option value="Elektronik">Elektronik</option>
             <option value="kesehatan">Kesehatan</option>
@@ -203,9 +204,7 @@ function InfoProduct(props) {
             <input {...getInputProps()} />
             {files.length === 0 ? <button className="mb-3 box2" >
               <h2>
-                <BiPlus
-                  className="plus"
-                />
+                <BiPlus className="plus"/>
               </h2>
             </button> :
               <div>
