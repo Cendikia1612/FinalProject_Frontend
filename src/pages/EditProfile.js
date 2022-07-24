@@ -22,35 +22,36 @@ function EditProfile() {
     message: "",
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Check status user login
-        // 1. Get token from localStorage
-        const token = localStorage.getItem("token");
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       // Check status user login
+  //       // 1. Get token from localStorage
+  //       const token = localStorage.getItem("token");
 
-        // 2. Check token validity from API
-        const currentUserRequest = await axios.get(
-          "http://localhost:2000/api/v1/profile",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+  //       // 2. Check token validity from API
+  //       const currentUserRequest = await axios.get(
+  //         "http://localhost:2000/api/v1/profile",
+  //         {
+  //           headers: {
+  //             Authorization: `Bearer ${token}`,
+  //           },
+  //         }
+  //       );
 
-        const currentUserResponse = currentUserRequest.data;
+  //       const currentUserResponse = currentUserRequest.data;
 
-        if (currentUserResponse.status) {
-          setUser(currentUserResponse.data.user);
-        }
-      } catch (err) {
-        setIsLoggedIn(false);
-      }
-    };
+  //       if (currentUserResponse.status) {
+  //         setUser(currentUserResponse.data.user);
+  //       }
+  //     } catch (err) {
+  //       setIsLoggedIn(false);
+  //       // console.log(user);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const onUpdate = async (e) => {
     e.preventDefault();
@@ -65,7 +66,7 @@ function EditProfile() {
       userToUpdatePayload.append("image", imageField);
 
       const updateRequest = await axios.put(
-        `http://localhost:2000/api/v1/profile`,
+        "http://localhost:2000/api/v1/profile",
         userToUpdatePayload,
         {
           headers: {
@@ -108,7 +109,7 @@ function EditProfile() {
 
       <Container className="my-5 w-50">
         <div>
-          <Link className="arrow2" to="/account" style={{ color: "black" }}>
+          <Link className="arrow2" to="/" style={{ color: "black" }}>
             <FiArrowLeft />
           </Link>
         </div>
@@ -131,6 +132,7 @@ function EditProfile() {
                 }}
               />
             </Box>
+
           ) : (
             <button className="mb-3 box1 buttonCamera">
               <h2>

@@ -36,7 +36,7 @@ export default function CardProduct({ sellerProduct }) {
     return (
         <>
             <Container className="card-content-seller">
-                <Link style={styleLink} to="/InfoProduct">
+                <Link style={styleLink} to="/infoproduct">
                     <Card style={productCard} className="add-product d-flex align-items-center justify-content-center">
                         <div className="d-flex align-items-center justify-content-center">
                             <FiPlus className="add-product-icon" />
@@ -47,7 +47,7 @@ export default function CardProduct({ sellerProduct }) {
                     </Card>
                 </Link>
                 {sellerProduct ? sellerProduct.map((product) => (
-                    <Link to={`/detailProduct/${product.id}`} style={{ textDecoration: "none", color: "black" }}>
+                    <Link to={`/infoproduct`} style={{ textDecoration: "none", color: "black" }}>
                         <div key={product.id}>
                             <Card style={productCard}>
                                 
@@ -55,7 +55,7 @@ export default function CardProduct({ sellerProduct }) {
                                     className="w-80 align-self-center"
                                     variant="top"
                                     multiple
-                                    src={`http://localhost:8888/${product.image[0]}`}
+                                    src={`${product.image}`}
                                     style={image}
                                 />
                                 <Card.Body className="p-2">
