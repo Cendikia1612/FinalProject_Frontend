@@ -148,7 +148,7 @@ export function ModalTawar() {
         <Modal.Body>
           <p className="fw-bold">Masukkan Harga Tawarmu</p>
           <p className="text-black-50">
-          Harga tawaranmu akan diketahui penual, jika penjual cocok kamu akan segera dihubungi penjual.
+            Harga tawaranmu akan diketahui penual, jika penjual cocok kamu akan segera dihubungi penjual.
           </p>
           <Stack
             direction="horizontal"

@@ -49,11 +49,11 @@ export default function InfoPenawar() {
                 </nav>
             </div>
             <div>
-                    <div className="col-6 text-center mt-3">
-                        <Link className="arrow2" to="/" style={{ color: "black" }}>
-                            <FiArrowLeft />
-                        </Link>
-                    </div>
+                <div className="col-6 text-center mt-3">
+                    <Link className="arrow2" to="/" style={{ color: "black" }}>
+                        <FiArrowLeft />
+                    </Link>
+                </div>
                 <Row>
                     <div className="col-2"></div>
                     <div className="col-4 mt-4">
