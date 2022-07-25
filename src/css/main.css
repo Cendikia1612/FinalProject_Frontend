@@ -201,11 +201,13 @@ font-weight: bold;
 z-index: 999;
 position: relative;
 margin: 25px 0 0 70px;
+color: black;
 }
 
 .text-2 {
 margin: 5px 0 0 70px;
 font-size: 10px;
+color: black;
 }
 
 .text-3 {
