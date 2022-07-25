@@ -146,7 +146,7 @@ function InfoProduct(props) {
       {/* navbar */}
       <div className="na1 py-4 shadow">
         <nav className="navbar navbar-expand-lg navbar-light bg-all">
-          <Link to="/">
+          <Link to="/detailproduct">
             <button className="na2 navbar-brand box"></button>
           </Link>
           <Navbar.Brand href="#" className="brand" />
@@ -160,7 +160,7 @@ function InfoProduct(props) {
 
       <Container className="my-5 w-50">
         <div>
-          <Link className="arrow2" to="/" style={{ color: "black" }}>
+          <Link className="arrow2" to="/seller/daftar-jual" style={{ color: "black" }}>
             <FiArrowLeft />
           </Link>
         </div>

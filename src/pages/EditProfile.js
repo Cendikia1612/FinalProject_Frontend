@@ -109,7 +109,7 @@ function EditProfile() {
 
       <Container className="my-5 w-50">
         <div>
-          <Link className="arrow2" to="/" style={{ color: "black" }}>
+          <Link className="arrow2" to="/seller/daftar-jual" style={{ color: "black" }}>
             <FiArrowLeft />
           </Link>
         </div>

@@ -1,7 +1,7 @@
 import "../css/main.css";
 import React, { useEffect, useState } from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -20,9 +20,9 @@ export default function Home() {
     const navigate = useNavigate();
     const searching = useSelector(state => state.search.search)
 
-    const handleJual = () => {
-        isLoggedIn ? user.kota ? navigate('/infoproduct') : navigate('/editprofile') : navigate('/login')
-    }
+    // const handleJual = () => {
+    //     isLoggedIn ? user.kota ? navigate('/infoproduct') : navigate('/editprofile') : navigate('/login')
+    // }
 
     useEffect(() => {
         // Function validasi user
@@ -40,9 +40,9 @@ export default function Home() {
                 );
 
                 const currentUserResponse = currentUserRequest.data;
-
+                        console.log(currentUserResponse);
                 if (currentUserResponse.status) {
-                    setUser(currentUserResponse.data.user);
+                    setUser(currentUserResponse.data);
                 }
             } catch (err) {
                 setIsLoggedIn(false);
@@ -50,6 +50,7 @@ export default function Home() {
         };
         validateLogin();
     }, []);
+
 
     const options = {
         items: 2,
@@ -187,13 +188,44 @@ export default function Home() {
                             <FiSearch className="align-self-center" /> Kesehatan
                         </Button>
                     </div>
-                    <Button className="d-flex gap-2 px-3 py-2 fixed-bottom button-sell mb-4" onClick={handleJual}>
+                    {/* <Button className="d-flex gap-2 px-3 py-2 fixed-bottom button-sell mb-4" onClick={handleJual}>
                         <BsPlus
                             className="align-self-center "
-                            style={{ fontSize: "24px" }}
-                        />{" "}
+                            style={{ fontSize: "24px" }} />{" "}
                         Jual
-                    </Button>
+                    </Button> */}
+                    {isLoggedIn ? user != null ? 
+                    (
+                        <Link to="/infoproduct">
+                        <Button className="d-flex gap-2 px-3 py-2 fixed-bottom button-sell mb-4">
+                            <BsPlus
+                                className="align-self-center "
+                                style={{ fontSize: "24px" }}
+                            />{" "}
+                            Jual
+                        </Button>
+                    </Link>
+                    ) : (
+                        <Link to="/infoproduct">
+                            <Button className="d-flex gap-2 px-3 py-2 fixed-bottom button-sell mb-4">
+                                <BsPlus
+                                    className="align-self-center "
+                                    style={{ fontSize: "24px" }}
+                                />{" "}
+                                Jual
+                            </Button>
+                        </Link>
+                    ) : (
+                        <Link to="/login">
+                            <Button className="d-flex gap-2 px-3 py-2 fixed-bottom button-sell mb-4">
+                                <BsPlus
+                                    className="align-self-center "
+                                    style={{ fontSize: "24px" }}
+                                />{" "}
+                                Jual
+                            </Button>
+                        </Link>
+                    )}
                 </div>
 
             </Container>

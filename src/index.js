@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import EditProfile from "./pages/EditProfile";
-import UpdateProduct from "./pages/UpdateProduct";
 import Account from "./pages/Account";
 import DaftarJual from "./pages/DaftarJual";
 import DetailProduct from "./pages/DetailProduct";
@@ -25,7 +24,6 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/editprofile" element={<EditProfile />} />
-        <Route path="/updateproduct/:id" element={<UpdateProduct />} />
         <Route path="/infoproduct" element={<InfoProduct />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
